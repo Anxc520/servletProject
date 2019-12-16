@@ -15,7 +15,8 @@ public class selectServlet extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		//req.setCharacterEncoding("utf-8");
+		//String sql = req.getParameter("sql");
 		String sql = new String(req.getParameter("sql").getBytes("iso-8859-1"), "utf-8");;
 		System.out.println("-----------sql:"+sql);
 		ServiceUser serviceUser = new ServiceUser();

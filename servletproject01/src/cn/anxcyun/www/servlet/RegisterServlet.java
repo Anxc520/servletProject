@@ -22,6 +22,12 @@ public class RegisterServlet extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//req.setCharacterEncoding("utf-8");
+		//String name = req.getParameter("name");
+		//String classes = req.getParameter("class");
+		//String number = req.getParameter("number");
+		//String sex = req.getParameter("sex");
+		//String tel =req.getParameter("tel");
 		String name = new String(req.getParameter("username").getBytes("iso-8859-1"), "utf-8");
 		String classes =new String(req.getParameter("class").getBytes("iso-8859-1"), "utf-8");
 		String number = new String(req.getParameter("number").getBytes("iso-8859-1"), "utf-8");

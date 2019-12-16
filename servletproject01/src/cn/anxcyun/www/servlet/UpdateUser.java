@@ -14,6 +14,8 @@ public class UpdateUser extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//req.setCharacterEncoding("utf-8");
+		//String name = req.getParameter("name");
 		String name = new String(req.getParameter("name").getBytes("iso-8859-1"), "utf-8");
 		ServiceUser serviceUser = new ServiceUser();
 		User user =null;

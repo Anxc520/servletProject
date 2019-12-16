@@ -24,8 +24,9 @@ public class LoginServlet extends HttpServlet {
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
+		//req.setCharacterEncoding("utf-8");
+		//String name = req.getParameter("username");
+		//String number  = req.getParameter("number");
 		String name = new String(req.getParameter("username").getBytes("iso-8859-1"), "utf-8");
 		String number = new String(req.getParameter("number").getBytes("iso-8859-1"), "utf-8");
 		
